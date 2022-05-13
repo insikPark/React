@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-        practice 2 실행~되니...ㄴ
+        ssssssssss
         </p>
         a
       </header>
