@@ -13,7 +13,8 @@ function App(){
     
       <Hello2 age={20}></Hello2> 
       <br></br>
-      <hr></hr>      
+      <hr></hr>   
+         
       <Hello2 age={10}/>
       <Welcome />
     
