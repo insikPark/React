@@ -35,9 +35,8 @@ a {
 }
 
 .header .menu {
-  position: absolute;
-  top: 10px;
-  right: 0;
+  position: relative;
+  top: 40px;
 }
 
 .header .link {
@@ -49,13 +48,18 @@ a {
   border-radius: 4px;
 }
 
+.content {
+  margin-top: 80px;
+}
+
 .list_day {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 100px;
 }
 
 .list_day li {
-  flex: 20% 0 0;
+  flex: 33% 0 0;
   box-sizing: border-box;
   padding: 10px;
 }

@@ -14,9 +14,10 @@ export default function Day(){
    // console.log(a); 
 
     return <>
+    <div className="content">
     <h2>Day {day}</h2>
     <table>
-        <tbody>
+        <tbody id="table">
             {wordList.map(word=>(
                 <tr key={word.id}>
                     <td>
@@ -29,7 +30,7 @@ export default function Day(){
             ))}
         </tbody>
     </table>
-
+    </div>
     </>;
 }
 
