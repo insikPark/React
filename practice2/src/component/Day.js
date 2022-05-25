@@ -1,4 +1,5 @@
 import dummy from "../db/data.json";
+import Word from "./Word";
 import { useParams } from "react-router-dom"; // Day를 눌렀을 때 그에 맞는 Day로 이동시키기 위해 사용
 
 export default function Day(){
@@ -19,14 +20,7 @@ export default function Day(){
     <table>
         <tbody id="table">
             {wordList.map(word=>(
-                <tr key={word.id}>
-                    <td>
-                        {word.eng}
-                    </td>                
-                    <td>
-                        {word.kor}
-                    </td>
-             </tr>
+                <Word word={word} key={word.id}/>   // Word 컴포넌트를 찍어주고 props를 통해 word를 내보낸다
             ))}
         </tbody>
     </table>
