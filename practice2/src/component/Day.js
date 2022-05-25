@@ -1,7 +1,7 @@
 //import dummy from "../db/data.json";
 import Word from "./Word";
 import { useParams } from "react-router-dom"; // Day를 눌렀을 때 그에 맞는 Day로 이동시키기 위해 사용
-import { useEffect, useState } from "react";
+//import { useEffect, useState } from "react";
 import useFetch from "../hooks/useFetch";
 
 export default function Day(){
