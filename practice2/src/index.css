@@ -101,6 +101,17 @@ table td:first-child {
   background-color: firebrick;
 }
 
+#label {
+ padding: 10px; 
+ margin-right: 400px;
+}
+
+#current_day {
+  padding: 10px;
+  margin-top: 80px;
+}
+
+
 button {
   padding: 10px;
   font-weight: bold;
@@ -114,6 +125,7 @@ button {
 }
 
 .input_area {
+  margin-top: 80px;
   margin-bottom: 10px;
 }
 
@@ -130,7 +142,8 @@ button {
 }
 
 .input_area select {
-  width: 400px;
+  width: 425px;
   height: 40px;
   font-size: 20px;
+  margin-top: 0px;
 }
