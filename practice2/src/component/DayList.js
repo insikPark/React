@@ -28,6 +28,10 @@ export default function DayList(){
     
     const days = useFetch("http://localhost:3001/days");
 
+    if(days.length === 0){      // 네트워크 속도가 느려 데이터가 완전히 업로드 되지 않을 경우 표기하기 위함 
+        return <div id="span">Loading...</div>
+    }
+
     return (
         <ul className="list_day">
             {/*dummy.days.map(day =>(*/}   {/*dummy 대신 아래 days 이용하여 가져옴*/}

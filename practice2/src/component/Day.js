@@ -35,6 +35,7 @@ export default function Day(){
     return <>
     <div className="content">
     <h2>Day {day}</h2>
+    {words.length === 0 && <span>Loading...</span>}
     <table>
         <tbody id="table">
             {/* {wordList.map(word=>( */}

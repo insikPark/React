@@ -1,5 +1,5 @@
 import useFetch from "../hooks/useFetch";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import {useNavigate} from "react-router";
 
 export default function CreateWord(){
@@ -8,6 +8,8 @@ export default function CreateWord(){
 
     const navigate = useNavigate(); // 처리 후 원하는 페이지로 이동시키기 위함
 
+    const [isLoading, setIsLoading] = useState(false);  // 저장 버튼 여러 번 클릭시 발생되는 에러를 방지하기 위함
+
     function onSubmit(e){   // 저장 버튼 클릭 시, 새로고침 되는 것을 방지하기 위함
         e.preventDefault();
         
@@ -15,6 +17,8 @@ export default function CreateWord(){
         // console.log(korRef.current.value);
         // console.log(dayRef.current.value);
 
+        if(!isLoading){
+            setIsLoading(true);
         fetch(`http://localhost:3001/words/`, {   // words까지만 입력을 하고 POST를 날리면 새로운 단어 생성
         method : "POST",
         headers : {
@@ -31,9 +35,10 @@ export default function CreateWord(){
         if(res.ok) {
             alert("단어가 추가되었습니다.");
             navigate(`/day/${dayRef.current.value}`);
+            setIsLoading(false);
         }
     })
-    }
+    }}
 
     const engRef = useRef(null);  // useRef는 dom에 접근할 때 사용 
     const korRef = useRef(null);
@@ -57,6 +62,6 @@ export default function CreateWord(){
             ))}
             </select>
         </div>
-        <button>저장</button>
+        <button style={{opacity : isLoading ? 0.3 : 1,}}>{isLoading ? "Saving..." : "저장"}</button>
     </form>
 )}

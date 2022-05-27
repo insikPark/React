@@ -101,6 +101,13 @@
       "kor": "고양이",
       "isDone": false,
       "id": 14
+    },
+    {
+      "day": "4",
+      "eng": "camel",
+      "kor": "낙타",
+      "isDone": false,
+      "id": 15
     }
   ]
 }

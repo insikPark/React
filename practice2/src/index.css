@@ -111,6 +111,10 @@ table td:first-child {
   margin-top: 80px;
 }
 
+#span {
+  margin-top: 150px;
+  font-size: 25px;
+}
 
 button {
   padding: 10px;
