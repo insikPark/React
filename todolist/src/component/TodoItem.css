@@ -15,6 +15,7 @@
 
 .content {
     cursor : pointer;
+    font-weight : bold;
     flex : 1;
     display: flex;
     align-items: center;

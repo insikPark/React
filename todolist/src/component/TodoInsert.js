@@ -28,7 +28,7 @@ export default function TodoInsert({onInsertToggle, onInsertTodo, selectedTodo, 
         <div>
             <div className="background" onClick={onInsertToggle}></div>
             <form onSubmit={selectedTodo ? () => {onUpdate(selectedTodo.id, value)} : onSubmit}>
-                <input placeholder='enter...' value={value} onChange={onChange}></input>
+                <input placeholder='일정을 입력하세요.' value={value} onChange={onChange}></input>
                 {selectedTodo ? (
                 <div className='rewrite'>
                     <TiPencil onClick={() => {onUpdate(selectedTodo.id, value)}}/>

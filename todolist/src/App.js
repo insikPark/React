@@ -90,7 +90,7 @@ function App() {
           onInsertToggle={onInsertToggle} 
           onInsertTodo={onInsertTodo}
           onRemove={onRemove}
-          onUpdate={onUpdate}/>}   {/*+버튼 클릭 시에만 나타나게 하기 위함*/}
+          onUpdate={onUpdate}/>}   {/* +버튼 클릭 시에만 나타나게 하기 위함*/}
      </Template>
   );
 }

@@ -10,12 +10,13 @@
     align-items: center;
     background: #6c567b;
     opacity: 0.8;
+    
 }
 
 form {
-    margin-left: 10%;
+    margin-left: 20%;
     position: fixed;
-    top: 40%;
+    top: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,8 +37,8 @@ form > input {
     border-bottom: 1px solid #f67280;
 
     padding: 0.5rem;
-    font-size: 1.125rem;
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1;
 }
 
 form > button {
