@@ -1,7 +1,7 @@
 import {MdCheckBox, MdCheckBoxOutlineBlank} from "react-icons/md";
 import './TodoItem.css';
 
-export default function TodoItem({todo, onCheckToggle}){
+export default function TodoItem({todo, onCheckToggle, onInsertToggle, onChangeSelectedTodo}){
 
     const {id, text, checked} = todo;
 
@@ -21,7 +21,10 @@ export default function TodoItem({todo, onCheckToggle}){
                     }}
                 />
                 )}
-                <div className="text">{text}</div>
+                <div className="text" onClick={() => {
+                    onChangeSelectedTodo(todo);
+                        onInsertToggle(); 
+                }}>{text}</div>
             </div>
         </div>
     )
