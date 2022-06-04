@@ -1,5 +1,5 @@
 import './App.css';
-import Template from './component/Template'; 
+import Main from './component/Main'; 
 import TodoList from './component/TodoList';
 import {useState} from 'react';
 import {MdAddCircle} from 'react-icons/md';
@@ -73,7 +73,7 @@ function App() {
   }
 
   return (
-     <Template todoLength={todos.length}>
+     <Main todoLength={todos.length}>
        <TodoList 
         todos = {todos} 
         onCheckToggle={onCheckToggle} 
@@ -91,7 +91,7 @@ function App() {
           onInsertTodo={onInsertTodo}
           onRemove={onRemove}
           onUpdate={onUpdate}/>}   {/* +버튼 클릭 시에만 나타나게 하기 위함*/}
-     </Template>
+     </Main>
   );
 }
 
