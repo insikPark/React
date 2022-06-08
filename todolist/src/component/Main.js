@@ -6,10 +6,10 @@ export default function Main({children, todoLength}){   /* Template 컴포넌트
     return (
         <>        
         <div className='Header'>일정 관리</div>
-            <div className="Main">
-                <div className="title">오늘의 일정 ({todoLength})</div>
-                <div>{children}</div>
-            </div>
+        <div className="Main">
+            <div className="title">오늘의 일정 ({todoLength})</div>
+            <div>{children}</div>
+        </div>
         </>
 
     )

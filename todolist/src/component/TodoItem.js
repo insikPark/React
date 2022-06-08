@@ -22,7 +22,7 @@ export default function TodoItem({todo, onCheckToggle, onInsertToggle, onChangeS
                 />
                 )}
                 <div className="text" onClick={() => {
-                    onChangeSelectedTodo(todo);
+                        onChangeSelectedTodo(todo);
                         onInsertToggle(); 
                 }}>{text}</div>
             </div>

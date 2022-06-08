@@ -10,11 +10,11 @@ export default function TodoList({todos, onCheckToggle, onInsertToggle, onChange
             {todos.map(todo => (
             <TodoItem 
                 todo={todo} 
-                key={todo.id}
+                key={todo.id}   //  list를 렌더링 할 때는 key값 필요
                 onCheckToggle={onCheckToggle}
                 onInsertToggle={onInsertToggle}
                 onChangeSelectedTodo={onChangeSelectedTodo}
-            />   //  list를 렌더링 할 때는 key값 필요
+            />   
         ))} 
         </div>    
     );
