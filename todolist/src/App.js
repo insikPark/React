@@ -62,7 +62,7 @@ function App() {
     setSelectedTodo(todo);
   }
 
-  const onRemove = id => {  // 삭제 버튼 클릭 시
+  const onRemove = (id) => {  // 삭제 버튼 클릭 시 id를 인자로 받음
     onInsertToggle(); // 삭제 시 팝업창을 닫기 위함 
     setTodos(todos => todos.filter(todo => todo.id !== id));  // filter를 이용해 todo.id가 인자로 받아온 id와 일치하지 않는 것만 리턴한다
   }

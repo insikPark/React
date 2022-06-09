@@ -8,14 +8,14 @@ export default function TodoInsert({onInsertToggle, onInsertTodo, selectedTodo, 
     const [value, setvalue] = useState('');
 
     const onChange = (e) => {
-        setvalue(e.target.value);
+        setvalue(e.target.value);   // 일정을 등록하세요 팝업에 새로운 일정을 등록시 새로운 값이 저장됨
     }
 
     const onSubmit = (e) => {
         e.preventDefault();
-        onInsertTodo(value);
-        setvalue('');
-        onInsertToggle();
+        onInsertTodo(value);        // 저장된 새로운 값을 onInsertTodo 함수에 넣어 등록함
+        setvalue('');               // 일정 제목 입력 후 저장시 남아있는 제목을 초기화 시켜줌
+        onInsertToggle();           // 팝업창 닫기
     }
 
     useEffect(() => {
