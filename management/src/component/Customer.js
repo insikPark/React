@@ -1,22 +1,20 @@
- import {TableRow} from '@material-ui/core/TableRow';
- import {TableCell} from '@material-ui/core/TableCell';
+ import TableRow from '@mui/material/TableRow';
+ import TableCell from '@mui/material/TableCell';
 
 
-export default function Customer({key, name, birthday, gender, job}){
-
-
+export default function Customer({customers}){
 
     return(
-        <>         <TableRow>        
-         <TableCell>번호 :</TableCell>
-   
-           {/* <TableCell>이름 : {name}</TableCell>
-           <TableCell>생년월일 : {this.birthday}</TableCell>
-           <TableCell>성별 : {this.gender}</TableCell>
-           <TableCell>직업 : {this.job}</TableCell> */}
+        <>         
+        {customers.map(c => (
+        <TableRow>        
+            <TableCell>{c.id} </TableCell>    
+            <TableCell>{c.name}</TableCell>
+            <TableCell>{c.birthday}</TableCell>
+            <TableCell>{c.gender}</TableCell>
+            <TableCell>{c.job}</TableCell>
         </TableRow>
-        </>
-
-        
+        ))}
+        </>        
     );
 }
