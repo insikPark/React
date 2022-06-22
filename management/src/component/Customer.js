@@ -7,13 +7,14 @@ export default function Customer({customers}){
     return(
         <>         
         {customers.map(c => (
-        <TableRow>        
+        <TableRow key={c.id}>        
             <TableCell>{c.id} </TableCell>    
             <TableCell>{c.name}</TableCell>
             <TableCell>{c.birthday}</TableCell>
             <TableCell>{c.gender}</TableCell>
             <TableCell>{c.job}</TableCell>
         </TableRow>
+       
         ))}
         </>        
     );
