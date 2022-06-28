@@ -9,6 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
 import { Paper } from '@mui/material';
 
+let nextId = 4;
 
 function App() {
   
